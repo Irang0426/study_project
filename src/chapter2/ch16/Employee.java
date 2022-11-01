@@ -1,7 +1,7 @@
 package chapter2.ch16;
 
 public class Employee {
-    public static int serialNum = 1000;
+    private static int serialNum = 1000;
 
     private int employeeId;
     private String employeeName;
@@ -10,6 +10,10 @@ public class Employee {
     public Employee() {
         serialNum++;
         employeeId = serialNum;
+    }
+
+    public static int getSerialNum() {
+        return serialNum;
     }
 
     public int getEmployeeId() {
